@@ -17,6 +17,7 @@ async function Signup() {
         if (res.status === 200) {
             const data = await res.json()
             cookies().set('token', data.token)
+            redirect('/dashboard')
        }
     }
   return (
