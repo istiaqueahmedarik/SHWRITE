@@ -1,4 +1,5 @@
 import { cookies } from "next/headers"
+import { redirect } from "next/navigation"
 
 async function page() {
     async function createProject(formData) {
@@ -18,7 +19,7 @@ async function page() {
 
         }
             const data = await response.json()
-            
+            redirect(`/editor/${data.id}`)
 
        
     }
