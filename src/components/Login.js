@@ -18,7 +18,7 @@ async function Login() {
         if(res.status === 200) {
             const data = await res.json()
             cookies().set('token', data.token)
-            redirect('/dashboard')
+            redirect('/')
         }
         else
         {

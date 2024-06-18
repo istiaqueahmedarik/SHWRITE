@@ -16,13 +16,13 @@ async function page() {
             'Authorization': `Bearer ${cookies().get('token').value}`
         }
     },
-        { next: { revalidate: 10 } }
     )
     if (response.status !== 200) {
         redirect('/restart')
     }
     console.log(response.status)
     const data = await response.json()
+    console.log(data)
     
     
     return (
