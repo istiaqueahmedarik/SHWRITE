@@ -1,5 +1,6 @@
 import { cookies } from "next/headers"
 import Link from "next/link"
+import { redirect } from "next/navigation"
 
 async function Signup() {
     async function register(formData) { 
